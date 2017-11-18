@@ -1,2 +1,2 @@
 ### Low Level Programming
-Learning Assembly, C in the Intel<sub>&regs;<sub> Architechture
+Learning Assembly, C in the Intel<sup>&regs;</sup> Architechture
