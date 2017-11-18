@@ -62,17 +62,9 @@ readable format, e.g `(unsigned long) $0 = 6`.
      Example 1:
      ```
      (lldb) register read rdi
-<<<<<<< HEAD
        rdi = 0x0000000000002000  test_string
      (lldb) memory read --format s $rdi
        0x00002000: "abcdef"	
      ```
        In C term, test_string is char * and it points to "abcdef"
 
-=======
-     	rdi = 0x0000000000002000  test_string
-     (lldb) memory read --format s $rdi
-        0x00002000: "abcdef"
-     ```
-     In C term, test_string is char * and it points to "abcdef"
->>>>>>> 1085ec31df7e533acf007a41e64a32d272658c56
