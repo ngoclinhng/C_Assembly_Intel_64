@@ -5,7 +5,13 @@ nasm -f macho64 prog.asm
 ld -macosx_version_min 10.7.0 -lSystem -o prog prog.o
 ./prog
 ```
+If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
 
+A few `nasm` related commands will come in handy:
+
+Version:		`nasm -v`
+Available formats:	`nasm -hf`
+Help:			`nasm -h`
 
 # Differences between `Linux` and `Mac OSX`
 
