@@ -67,3 +67,13 @@ readable format, e.g `(unsigned long) $0 = 6`.
        0x00002000: "abcdef"	
      ```
 
+     Example 2: reads first 3 characters from a null-terminated string
+     ```
+     (lldb) memory read --size 1 --format c --count 3 $rdi
+       0x00002000: abc
+     ```
+  
+  7. Do do...
+
+  8. If you're familiar with `gdb`, you can visit this [lldb vs gdb](https://lldb.llvm.org/lldb-gdb.html) for more informations.
+
