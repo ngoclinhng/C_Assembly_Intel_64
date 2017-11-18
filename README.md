@@ -60,10 +60,11 @@ readable format, e.g `(unsigned long) $0 = 6`.
   6. `memory read --size [sz] --format [x|a|i|c|s] --count cnt $register_name`: reads cnt consecutive memory cells, each cell has size of sz (1 for 1 byte, etc...) starting at the address stored in `register_name`(must be prefixed with `$` sign, i.e `$rdi`), and outputs it in either `x`(hexadecimal format), `a`(address), `i`(instruction), `c`(char) and `s`(null-terminated string).
 
      Example 1:
-     ```
-	(lldb) register read rdi
-     		rdi = 0x0000000000002000  test_string
-	(lldb) memory read --format s $rdi
-		0x00002000: "abcdef"	
-     ```
-	In C term, test_string is char * and it points to "abcdef"
+     
+	     ```
+		(lldb) register read rdi
+			rdi = 0x0000000000002000  test_string
+		(lldb) memory read --format s $rdi
+			0x00002000: "abcdef"	
+	     ```
+        In C term, test_string is char * and it points to "abcdef"
