@@ -9,7 +9,8 @@ ld -macosx_version_min 10.7.0 -lSystem -o prog prog.o
 
 # Differences between `Linux` and `Mac OSX`
 
-1. system call numbers
+## System call numbers
+
 The system call numbers supplied in `rax` before `syscall` instruction is executed 
 _are different_ on Mac OS X. To find them:
   * Find the kernel version:
