@@ -73,7 +73,7 @@ readable format, e.g `(unsigned long) $0 = 6`.
        0x00002000: abc
      ```
   
-  7. Do do...
+  7. To do...
 
   8. If you're familiar with `gdb`, you can visit this [lldb vs gdb](https://lldb.llvm.org/lldb-gdb.html) for more informations.
 
