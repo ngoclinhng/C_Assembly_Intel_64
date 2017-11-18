@@ -64,6 +64,6 @@ readable format, e.g `(unsigned long) $0 = 6`.
      (lldb) register read rdi
      	rdi = 0x0000000000002000  test_string
      (lldb) memory read --format s $rdi
-	0x00002000: "abcdef"
+        0x00002000: "abcdef"
      ```
      In C term, test_string is char * and it points to "abcdef"
