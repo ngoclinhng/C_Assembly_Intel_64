@@ -2,7 +2,7 @@ NASM=nasm -f macho64
 LD=ld -macosx_version_min 10.7.0 -lSystem
 
 all: strlen print_string print_string_nl print_uint print_int \
-	read_char
+	read_char read_word
 
 strlen: strlen.o
 	$(LD) -o $@ $^
@@ -34,17 +34,21 @@ read_char: read_char.o
 read_char.o: read_char.asm
 	$(NASM) $<
 
+read_word: read_word.o
+	$(LD) -o $@ $^
+read_word.o: read_word.asm
+	$(NASM) $<
 
 run: strlen print_string print_string_nl print_uint print_int \
-read_char
+read_char read_word
 	./strlen
 	./print_string
 	./print_string_nl
 	./print_uint
 	./print_int
 	./read_char
-
+	./read_word
 
 clean:
 	$(RM) *.o strlen print_string print_string_nl print_uint \
-	print_int read_char
+	print_int read_char read_word
