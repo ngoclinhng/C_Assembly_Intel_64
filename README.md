@@ -69,6 +69,13 @@ As always, the return value will be stored in the register `rax`.
 `syscall` instruction changes `rcx` and `r11`, thus if your program has something to do with these two
 registers, make sure to save them before `syscall` and restore them after that.
 
+
+# Callee-saved registers
+
+Callee-saved registers consists of 7 registers `rbx`, `rbp`, `rsp`, `r12-r15`. These registers must be
+restored by the procudure being call. So, if it needs to change them, it has to change them back.
+
+
 ## Don't underscore global labels!
 
 In linux system we can declare global label such as `global _start`, etc...But things
