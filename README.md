@@ -31,17 +31,17 @@ version: `nasm -v`, available formats:	`nasm -hf`, help: `nasm -h`
 
 # System call on MAC OS X
 
-1. Arguments are passed in registers rdi, rsi, rdx, r10, r8 and r9 for the first argument, second 
+### Arguments are passed in registers rdi, rsi, rdx, r10, r8 and r9 for the first argument, second 
 argument, third argument and so on.
 
-2. The system call number is in the register rax.
+### The system call number is in the register rax.
    
    One important thing to keep in mind is that on Mac OSX we need to add `0x2000000` to the actual
-   system call number before copying it to rax.
+   system call number before copying it into rax.
 
    How to find system call number?
 
-     1. Check the kernel version on your Mac machine by typing this command on the terminal
+        Check the kernel version on your Mac machine by typing this command on the terminal
         `uname -v`. On my machine the output looks like this:
 
         ```
