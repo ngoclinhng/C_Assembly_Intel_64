@@ -22,7 +22,7 @@ program on Mac OS X.
 3. Run: `./prog`
 
 
-<b><u>NOTICE:</u></b> If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
+<b>NOTICE</b> If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
 
 A few `nasm` related commands will come in handy:
 
@@ -31,24 +31,23 @@ version: `nasm -v`, available formats:	`nasm -hf`, help: `nasm -h`
 
 # System call on MAC OS X
 
-1. Arguments are passed in registers rdi, rsi, rdx, r10, r8 and r9 for the first argument, second 
- argument, third argument and so on.
+### System call number
 
-2. The system call number is in the register rax.
-   
-   One important thing to keep in mind is that on Mac OSX we need to add `0x2000000` to the actual
-   system call number before copying it into rax.
+System call number is passed into the register `rax` berofe the `syscall` instruction.
+One important thing to keep in mind is that on Mac OSX we need to add `0x2000000` to the actual
+system call number before copying it into `rax`.
 
-   How to find system call number?
+How to find system call number?
 
-   + Check the kernel version on your Mac machine by typing this command on the terminal
-   `uname -v`. On my machine the output looks like this:
+1. Check the kernel version on your Mac machine by typing this command on the terminal
+`uname -v`. On my machine the output looks like this:
 
-        ```
-        Linhs-MBP:~ linhngoc$ uname -v
-        Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64
-        ```
-## System call numbers
+   ```
+   Linhs-MBP:~ linhngoc$ uname -v
+   Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64
+   ```
+
+### System call arguments
 
 The system call numbers supplied in `rax` before `syscall` instruction is executed 
 _are different_ on Mac OS X. To find them:
