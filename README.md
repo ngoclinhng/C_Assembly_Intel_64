@@ -21,12 +21,7 @@ program on Mac OS X.
 
 3. Run: `./prog`
 
-```
-nasm -f macho64 prog.asm
-ld -macosx_version_min 10.7.0 -lSystem -o prog prog.o
-./prog
-```
-If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
+<b>NOTICE: </b>If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
 
 A few `nasm` related commands will come in handy:
 
