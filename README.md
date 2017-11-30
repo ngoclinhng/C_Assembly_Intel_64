@@ -41,7 +41,7 @@ version: `nasm -v`, available formats:	`nasm -hf`, help: `nasm -h`
 
    How to find system call number?
 
-   * Check the kernel version on your Mac machine by typing this command on the terminal
+  * Check the kernel version on your Mac machine by typing this command on the terminal
    `uname -v`. On my machine the output looks like this:
 
      ```
