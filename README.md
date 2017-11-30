@@ -8,19 +8,19 @@ Learning Assembly, C in the Intel 64 Architechture from the book
 
 # Compile, link, run asm codes in Mac OS X
 
-### Compile:
+1. Compile:
   ```
   nasm -f macho64 prog.asm
   ```
   This will produce the file `prog.o` ready for the linker.
 
-### Linking:
+2. Linking:
   ```
   ld -macosx_version_min 10.7.0 -lSystem -o prog prog.o
   ```
   This will produce the executable object file ready to run.
 
-### Run: `./prog`
+3. Run: `./prog`
 
 ```
 nasm -f macho64 prog.asm
