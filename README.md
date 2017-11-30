@@ -32,7 +32,7 @@ version: `nasm -v`, available formats:	`nasm -hf`, help: `nasm -h`
 # System call on MAC OS X
 
 ### Arguments are passed in registers rdi, rsi, rdx, r10, r8 and r9 for the first argument, second 
-###argument, third argument and so on.
+### argument, third argument and so on.
 
 ### The system call number is in the register rax.
    
