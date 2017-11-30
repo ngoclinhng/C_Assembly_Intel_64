@@ -26,12 +26,28 @@ program on Mac OS X.
 
 A few `nasm` related commands will come in handy:
 
-version:		`nasm -v`
-available formats:	`nasm -hf`
-help:			`nasm -h`
+version: `nasm -v`, available formats:	`nasm -hf`, help: `nasm -h`
 
-# Differences between `Linux` and `Mac OSX`
 
+# System call on MAC OS X
+
+1. Arguments are passed in registers rdi, rsi, rdx, r10, r8 and r9 for the first argument, second 
+argument, third argument and so on.
+
+2. The system call number is in the register rax.
+   
+   One important thing to keep in mind is that on Mac OSX we need to add `0x2000000` to the actual
+   system call number before copying it to rax.
+
+   How to find system call number?
+
+     1. Check the kernel version on your Mac machine by typing this command on the terminal
+        `uname -v`. On my machine the output looks like this:
+
+        ```
+        Linhs-MBP:~ linhngoc$ uname -v
+        Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64
+        ```
 ## System call numbers
 
 The system call numbers supplied in `rax` before `syscall` instruction is executed 
