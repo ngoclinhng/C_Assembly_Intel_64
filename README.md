@@ -46,6 +46,9 @@ How to find system call number?
    Linhs-MBP:~ linhngoc$ uname -v
    Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64
    ```
+   In my case, ther kernel version part is `xnu-3789.70.16`
+
+2. Go to [https://opensource.apple.com/source/xnu/xnu-3789.70.16/bsd/kern/syscalls.master.auto.html](https://opensource.apple.com/source/xnu/xnu-3789.70.16/bsd/kern/syscalls.master.auto.html)
 
 ### System call arguments
 
