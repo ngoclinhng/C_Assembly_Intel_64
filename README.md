@@ -3,10 +3,21 @@
 Learning Assembly, C in the Intel 64 Architechture from the book
 [low level programming](https://www.amazon.com/Low-Level-Programming-Assembly-Execution-Architecture/dp/1484224027/ref=sr_1_1?ie=UTF8&qid=1510976772&sr=8-1&keywords=low+level+programming)
 
-<b>Note:</b> All the codes in this repository only work on Mac OSX not Linux (which is what being taught
-in the book and the author's github repo).
+<b>Note:</b> All the codes in this repository only work on Mac OS X not Linux (which is different from
+ the book and the author's github repo).
 
 # Compile, link, run asm codes in Mac OS X
+1. Compile:
+  ```
+  nasm -f macho64 prog.asm
+  ```
+  This will produce the file `prog.o` ready for the linker.
+2. Linking:
+  ```
+  ld -macosx_version_min 10.7.0 -lSystem -o prog prog.o
+  ```
+  This will produce the executable object file ready to run.
+3. Run: `./prog`
 
 ```
 nasm -f macho64 prog.asm
