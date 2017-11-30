@@ -8,7 +8,7 @@ Learning Assembly, C in the Intel 64 Architechture from the book
 
 # Compile, link, run asm codes in Mac OS X
 
-1. Compile:
+1.Compile:
   ```
   nasm -f macho64 prog.asm
   ```
