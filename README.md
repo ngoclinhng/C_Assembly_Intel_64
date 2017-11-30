@@ -22,7 +22,7 @@ program on Mac OS X.
 3. Run: `./prog`
 
 
-<b>NOTICE:</b> If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
+<b><u>NOTICE:</u></b> If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
 
 A few `nasm` related commands will come in handy:
 
@@ -41,13 +41,13 @@ version: `nasm -v`, available formats:	`nasm -hf`, help: `nasm -h`
 
    How to find system call number?
 
-  * Check the kernel version on your Mac machine by typing this command on the terminal
+   + Check the kernel version on your Mac machine by typing this command on the terminal
    `uname -v`. On my machine the output looks like this:
 
-     ```
-     Linhs-MBP:~ linhngoc$ uname -v
-     Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64
-     ```
+        ```
+        Linhs-MBP:~ linhngoc$ uname -v
+        Darwin Kernel Version 16.7.0: Thu Jun 15 17:36:27 PDT 2017; root:xnu-3789.70.16~2/RELEASE_X86_64
+        ```
 ## System call numbers
 
 The system call numbers supplied in `rax` before `syscall` instruction is executed 
