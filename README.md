@@ -58,6 +58,17 @@ How to find system call number?
 System calls arguments are passed in to registers `rdi`, `rsi`, `rdx`, `r10`, `r8` and `r9` for
 the first argument, second argument, third argument and so on, respectively.
 
+System calls are limited up to 6 arguments, and no argument is passed directly on stack.
+
+### Return value
+
+As always, the return value will be stored in the register `rax`.
+
+### One more thing...
+
+`syscall` instruction changes `rcx` and `r11`, thus if your program has something to do with these two
+registers, make sure to save them before `syscall` and restore them after that.
+
 ## Don't underscore global labels!
 
 In linux system we can declare global label such as `global _start`, etc...But things
