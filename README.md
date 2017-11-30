@@ -3,7 +3,7 @@
 Learning Assembly, C in the Intel 64 Architechture from the book
 [low level programming](https://www.amazon.com/Low-Level-Programming-Assembly-Execution-Architecture/dp/1484224027/ref=sr_1_1?ie=UTF8&qid=1510976772&sr=8-1&keywords=low+level+programming)
 
-<b>Note:</b> All the codes in this repository only work on Mac OS X not Linux (which is different from
+<b>NOTICE</b> All the codes in this repository only work on Mac OS X not Linux (which is different from
  the book and the author's github repo).
 
 # Compile, link, run asm codes in Mac OS X
@@ -21,13 +21,14 @@ program on Mac OS X.
 
 3. Run: `./prog`
 
-<b>NOTICE: </b>If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
+
+<b>NOTICE:</b> If the `nasm` comes with Mac OSX system doesn't support `macho64` format, use [homebrew](https://brew.sh) to install latest version of `nasm`: `brew install nasm`
 
 A few `nasm` related commands will come in handy:
 
-Version:		`nasm -v`
-Available formats:	`nasm -hf`
-Help:			`nasm -h`
+version:		`nasm -v`
+available formats:	`nasm -hf`
+help:			`nasm -h`
 
 # Differences between `Linux` and `Mac OSX`
 
