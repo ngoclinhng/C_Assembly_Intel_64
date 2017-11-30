@@ -48,7 +48,10 @@ How to find system call number?
    ```
    In my case, ther kernel version part is `xnu-3789.70.16`
 
-2. Go to [https://opensource.apple.com/source/xnu/xnu-3789.70.16/bsd/kern/syscalls.master.auto.html](https://opensource.apple.com/source/xnu/xnu-3789.70.16/bsd/kern/syscalls.master.auto.html)
+2. Go to [https://opensource.apple.com/source/xnu/xnu-3789.70.16/bsd/kern/syscalls.master.auto.html](https://opensource.apple.com/source/xnu/xnu-3789.70.16/bsd/kern/syscalls.master.auto.html). Don't forget to replace the kernel version to match yours.
+   
+   This page lists all the system calls available on MAC OS X system. The left most column contains system calls numbers,
+   and the right most column contains function prototypes.
 
 ### System call arguments
 
